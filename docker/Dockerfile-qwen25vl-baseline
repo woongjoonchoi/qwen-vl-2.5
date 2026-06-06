@@ -1,0 +1,27 @@
+# Qwen2.5-VL Baseline Measurement Environment
+# Pure pip only, no conda.
+# Base: NVIDIA PyTorch container with CUDA 12.6 + cuDNN 9
+FROM nvcr.io/nvidia/pytorch:24.10-py3
+
+# System deps
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libglib2.0-0 libsm6 libxrender1 libxext6 libgl1-mesa-glx \
+    libgomp1 git curl wget && \
+    rm -rf /var/lib/apt/lists/*
+
+# Python ML packages (pure pip, no conda)
+RUN pip install --no-cache-dir \
+    "transformers>=4.49.0,<5.0.0" \
+    "qwen-vl-utils==0.0.14" \
+    "accelerate>=0.34.0" \
+    "Pillow>=10.0.0" \
+    "pandas>=2.0.0" \
+    "pyarrow>=14.0.0" \
+    "numpy>=1.24.0" \
+    "pyyaml>=6.0"
+
+# Set working directory to project root (will be bind-mounted)
+WORKDIR /workspace
+
+# Default entrypoint: bash
+ENTRYPOINT ["/bin/bash"]

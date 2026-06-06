@@ -1,0 +1,31 @@
+{
+  "sdpa_baseline": {
+    "docvqa_anls": 0.9393,
+    "chartqa_relaxed_acc": 0.666,
+    "n": 500,
+    "ocrbench_em": 0.622,
+    "ocrbench_em_sdpa": 0.622
+  },
+  "fa2": {
+    "docvqa_anls": 0.9344,
+    "chartqa_relaxed_acc": 0.8302,
+    "n_docvqa": 5349,
+    "n_chartqa": 1920,
+    "ocrbench_em": 0.3723,
+    "ocrbench_anls": 0.3987,
+    "n_ocrbench": 10000,
+    "ocrbench_em_taskspecific": 0.5468,
+    "n_ocrbench_taskspec": 10000
+  },
+  "guide": {
+    "docvqa_anls": 0.9347,
+    "chartqa_relaxed_acc": 0.8286,
+    "n_docvqa": 5349,
+    "n_chartqa": 1920,
+    "ocrbench_em": 0.3741,
+    "ocrbench_anls": 0.3989,
+    "n_ocrbench": 10000,
+    "ocrbench_em_taskspecific": 0.5464,
+    "n_ocrbench_taskspec": 10000
+  }
+}

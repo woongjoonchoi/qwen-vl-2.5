@@ -1,0 +1,7 @@
+# Exclude large/generated files
+*.png
+*.log
+
+# Keep directory marker
+!.gitkeep
+!.gitignore

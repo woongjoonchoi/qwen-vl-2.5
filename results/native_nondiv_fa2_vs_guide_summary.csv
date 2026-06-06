@@ -1,0 +1,3 @@
+benchmark,grid_type,n,n_tok_matched,med_n_visual_tokens,med_fa2_ve_ms,med_guide_ve_ms,med_ve_speedup,med_ttft_speedup,med_e2e_speedup,med_tpot_fa2_ms,med_tpot_guide_ms
+docvqa,boundary,44,38,4956,206.7,216.4,1.0004,0.9959,0.9806,28.77,28.93
+docvqa,divisible,6,6,5040,212.7,209.4,1.0141,1.0089,0.9826,28.03,28.63

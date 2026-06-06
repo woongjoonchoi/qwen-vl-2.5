@@ -1,0 +1,25 @@
+# Large data — download via scripts/download_*.sh
+data/
+models/
+
+# Generated outputs — recreate via tools/build_qwen_benchmark_manifest.py
+output/
+
+# Logs and runtime artifacts
+logs/
+*.log
+
+# Results: CSV (measured data) committed, plots/logs excluded
+results/*.png
+results/*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Misc
+get-pip.py
+*.egg-info/
+.DS_Store

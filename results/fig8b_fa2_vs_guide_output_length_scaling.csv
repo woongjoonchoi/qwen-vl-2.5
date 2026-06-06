@@ -1,0 +1,9 @@
+benchmark,resolution,max_new_tokens,sdpa_ve_ms,sdpa_e2e_ms,sdpa_tpot_ms,f_vision,ve_speedup,e2e_speedup_amdahl,tpot_speedup,method
+docvqa,1792,32,390.561,947.6694,24.5301,0.4344,1.0158,1.0068,1.0,amdahl_from_measured_ve_speedup
+docvqa,1792,64,391.6823,1015.2903,24.5292,0.4268,1.0158,1.0067,1.0,amdahl_from_measured_ve_speedup
+docvqa,1792,256,394.4802,1274.368,25.7121,0.4242,1.0158,1.0066,1.0,amdahl_from_measured_ve_speedup
+docvqa,1792,1024,386.0066,1704.7104,25.678,0.425,1.0158,1.0067,1.0,amdahl_from_measured_ve_speedup
+chartqa,1792,32,397.1809,1127.6533,24.8554,0.3758,1.004,1.0015,1.0,amdahl_from_measured_ve_speedup
+chartqa,1792,64,387.8113,1433.9411,23.7447,0.3175,1.004,1.0013,1.0,amdahl_from_measured_ve_speedup
+chartqa,1792,256,399.237,2265.1811,24.6386,0.2842,1.004,1.0011,1.0,amdahl_from_measured_ve_speedup
+chartqa,1792,1024,367.8971,2316.1541,22.477,0.2842,1.004,1.0011,1.0,amdahl_from_measured_ve_speedup

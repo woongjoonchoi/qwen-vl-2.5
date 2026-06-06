@@ -1,0 +1,18 @@
+# Qwen2.5-VL GUIDE Kernel-Level Experiment Environment
+# Pure pip only, no conda.
+# Extends baseline with Triton + flash-attn for kernel dev.
+FROM qwen25vl-baseline:latest
+
+# Triton (GPU kernel compiler)
+RUN pip install --no-cache-dir "triton>=3.0.0"
+
+# flash-attn for baseline comparison (varlen attention)
+RUN pip install --no-cache-dir flash-attn --no-build-isolation || \
+    echo "[WARN] flash-attn install failed — will use sdpa fallback"
+
+# ripgrep for code audit in Stage 1/2
+RUN apt-get update -qq && apt-get install -y --no-install-recommends ripgrep && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+ENTRYPOINT ["/bin/bash"]
